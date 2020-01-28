@@ -5,16 +5,17 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
+  baseUrl = 'https://localhost:44395';
+
   constructor(private http: HttpClient) { }
 
   async getAllEvents(): Promise<any[]>{
     let events;
 
     await this.http
-      .get('https://localhost:44395/api/events')
+      .get(this.baseUrl + '/api/events')
       .toPromise()
       .then(response => {
-        console.log('events', response);
         events = response;
     });
 
@@ -25,10 +26,9 @@ export class DataService {
     let event;
 
     await this.http
-      .get('https://localhost:44395/api/events/' + id)
+      .get(this.baseUrl + '/api/events/' + id)
       .toPromise()
       .then(response => {
-        console.log('details', response);
         event = response;
     });
 

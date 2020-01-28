@@ -11,12 +11,14 @@ import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TransitionComponent } from './transition/transition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventDetailsComponent,
-    EventsComponent
+    EventsComponent,
+    TransitionComponent
   ],
   imports: [
     BrowserModule,
