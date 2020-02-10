@@ -2,11 +2,34 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-mat-card { margin:2em; }
+
 .centered-div {
     position: fixed;
     top: 50%;
     left: 50%;
  }
- 
+
+  .height100{
+    min-height: 100px;
+  }
+
+  .height250{
+    min-height: 250px;
+  }
+
+  mat-card-footer{
+      padding: 1em;
+  }
+
+ mat-card {
+    margin:1em;    
+    min-width: calc(100% - 70px);
+    min-height: calc(100% - 70px);
+  }
+
+  mat-list-item{
+    cursor: pointer;
+  }
+
